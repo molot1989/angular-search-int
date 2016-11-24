@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <h4>Список</h4>
+                <div ng-repeat="result in $ctrl.resultList track by $index">
+                    <p>{{result}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Ведите строку</label>
+                <input class="form-control" ng-model="$ctrl.textInput">
+            </div>
+            <div>
+                <button type="button" class="btn btn-success" ng-click="$ctrl.run()">Обработать</button>
+            </div>
+            <div class="result">
+                <h4>Последний результят</h4>
+                <p ng-if="$ctrl.result.text !=''">{{$ctrl.result.text}} : {{$ctrl.result.countInt}}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
